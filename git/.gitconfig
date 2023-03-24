@@ -1,0 +1,10 @@
+# This is Git's per-user configuration file.
+[user]
+  name = Bilal Saad
+  email = bilalsaad923@gmail.com
+
+[colour]
+  ui = true
+
+[init]
+  defaultBranch = main
