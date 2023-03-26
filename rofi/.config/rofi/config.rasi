@@ -1,0 +1,18 @@
+configuration {
+	disable-history: false;
+  display-drun: "Applications";
+  drun-display-format: "{name}";
+  display-filebrowser: "Files";
+  modi: "drun,filebrowser";
+  icon-theme: "Papirus";
+
+  matching: "fuzzy";
+  sort: true;
+  sorting-method: "fzf";
+  show-icons: true;
+
+  filebrowser {
+    directories-first: true;
+    sorting-method:    "name";
+  }
+}
