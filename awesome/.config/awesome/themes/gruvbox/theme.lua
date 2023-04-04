@@ -10,7 +10,7 @@ local utils = require("utils")
 local theme = {}
 
 theme.transparent = "#00000000"
-theme.font = "Fira Code Regular Nerd Font Complete"
+theme.font = "Fira Code Regular Nerd Font Complete 11"
 --
 -- Gruvbox-Material Hard Colors
 theme.lightred    = "#ea6962"
@@ -78,9 +78,18 @@ theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir()  .. "t
 -- -- bar
 theme.bar_height = dpi(40)
 
+-- spacing
+theme.spacing_sm = dpi(4)
+theme.spacing = dpi(8)
+theme.spacing_md = dpi(12)
+theme.spacing_lg = dpi(16)
+theme.spacing_xl = dpi(29)
+
 -- system tray
 theme.systray_icon_spacing = theme.spacing
 theme.systray_max_rows = 7
+
+
 
 -- ********************************* --
 --
