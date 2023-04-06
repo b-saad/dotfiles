@@ -53,9 +53,13 @@ local rules = {
       }, properties = { titlebars_enabled = true }
     },
 
-    -- Set MPV to open full screen and on tag "5" on screen 1.
+    -- Set MPV to open on tag "5" on screen 1
     { rule = { class = "mpv" },
       properties = { screen = 1, tag = "5", switch_to_tags = true, } },
+
+    -- Set Thudnerbird to open on tag "3" on screen 1
+    { rule = { class = "thunderbird" },
+      properties = { screen = 1, tag = "3" } },
 }
 -- }}}
 
