@@ -75,17 +75,17 @@ M.globalkeys = gears.table.join(
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"}),
-
-    -- Custom 
-    awful.key({ modkey }, "space", function() awful.util.spawn("rofi -show drun -no-click-to-exit", false) end,
-              {description = "launch rofi launcher", group = "launcher"}),
-
-    awful.key({}, "XF86AudioRaiseVolume", function() awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ +1%") end,
+    
+    -- Volume control
+    awful.key({}, "XF86AudioRaiseVolume", function() awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ +2%") end,
               {description = "volume up", group = "audio"}),
-    awful.key({}, "XF86AudioLowerVolume", function() awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ -1%") end,
+    awful.key({}, "XF86AudioLowerVolume", function() awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ -2%") end,
               {description = "volume down", group = "audio"}),
     awful.key({}, "XF86AudioMute", function() awful.util.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle") end,
-              {description = "volume mute toggle", group = "audio"})
+              {description = "volume mute toggle", group = "audio"}),
+    -- Custom 
+    awful.key({ modkey }, "space", function() awful.util.spawn("rofi -show drun -no-click-to-exit", false) end,
+              {description = "launch rofi launcher", group = "launcher"})
 )
 
 
