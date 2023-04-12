@@ -8,6 +8,8 @@ local global = require("global")
 local modkey = global.modkey
 local terminal = global.terminal
 
+local volume = require("bar.volume")
+
 local M = {}
 
 -- {{{ Key bindings
@@ -77,12 +79,25 @@ M.globalkeys = gears.table.join(
               {description = "show the menubar", group = "launcher"}),
     
     -- Volume control
-    awful.key({}, "XF86AudioRaiseVolume", function() awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ +2%") end,
-              {description = "volume up", group = "audio"}),
-    awful.key({}, "XF86AudioLowerVolume", function() awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ -2%") end,
-              {description = "volume down", group = "audio"}),
-    awful.key({}, "XF86AudioMute", function() awful.util.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle") end,
-              {description = "volume mute toggle", group = "audio"}),
+    awful.key({}, "XF86AudioRaiseVolume",
+      function()
+        awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ +2%")
+      end,
+      {description = "volume up", group = "audio"}
+    ),
+    awful.key({}, "XF86AudioLowerVolume",
+      function()
+        awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ -2%")
+      end,
+      {description = "volume down", group = "audio"}
+    ),
+    awful.key({}, "XF86AudioMute",
+      function()
+        awful.util.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")
+      end,
+      {description = "volume mute toggle", group = "audio"}
+    ),
+
     -- Custom 
     awful.key({ modkey }, "space", function() awful.util.spawn("rofi -show drun -no-click-to-exit", false) end,
               {description = "launch rofi launcher", group = "launcher"})
