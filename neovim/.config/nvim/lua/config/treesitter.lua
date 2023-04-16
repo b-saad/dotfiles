@@ -28,7 +28,6 @@ configs.setup({
     "terraform",
     "vim",
     "yaml",
-    "help",
     "query"
   },
 
