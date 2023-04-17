@@ -9,7 +9,7 @@ require "lsp"                     -- LSP plugins and setup
 
 --- Plugin Configurations ---------------------------
 require "config/alpha-nvim"       -- Dashboard
-require "config/bufferline"       -- Bufferline
+require "config/bufferline"       -- Buffferline
 require "config/colorscheme"      -- Color scheme
 require "config/comment"          -- Commenting
 require "config/gitsigns"         -- Git signs
