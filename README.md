@@ -26,3 +26,7 @@ stow -v zsh git neovim    # whatever other else, can use "*/" for everything
 ## Install Plugins
 Open Neovim session, wait for packer to install on startup (in `plugins.lua`), and run `:PackerSync`
 
+## Mac OS Fonts
+
+## Installing Fonts
+After running `stow fonts-macos` you need to go to '~/Library/Fonts' in finder, highlight all the added fonts and double click to install them
