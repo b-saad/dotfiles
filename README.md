@@ -30,4 +30,4 @@ Open Neovim session, wait for packer to install on startup (in `plugins.lua`), a
 ## Mac OS Fonts
 
 ## Installing Fonts
-After running `stow fonts-macos` you need to go to '~/Library/Fonts' in finder, highlight all the added fonts and double click to install them
+`stow` won't work here, navigate to `.dotfiles/fonts-macs/Library/Fonts` in finder and just highlight and click all the fonts to install Fira Mono
