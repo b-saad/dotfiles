@@ -21,4 +21,4 @@ require "config/nvim-cmp"         -- Auto Complete
 require "config/nvim-tree"        -- Nvim-tree
 require "config/telescope"        -- Fuzzy finder
 require "config/treesitter"       -- Syntax Highlighting
-require "config/whichkey"
+require "config/whichkey"         -- Shortcut helper
