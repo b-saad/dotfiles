@@ -103,6 +103,9 @@ return packer.startup(function(use)
         ts_update()
       end,
     }
+  
+    -- Which Key
+    use "folke/which-key.nvim"                -- Keyboard shortcut helpers
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

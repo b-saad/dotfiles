@@ -18,11 +18,17 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal --
--- Better window navigation between splts
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+-- Move to window using the <alt> hjkl keys
+keymap("n", "<C-h>", "<C-w>h", { desc = "Go to left window", noremap = true, silent = true })
+keymap("n", "<C-j>", "<C-w>j", { desc = "Go to lower window", noremap = true, silent = true })
+keymap("n", "<C-k>", "<C-w>k", { desc = "Go to upper window", noremap = true, silent = true })
+keymap("n", "<C-l>", "<C-w>l", { desc = "Go to right window", noremap = true, silent = true })
+
+-- Resize window using <alt> arrow keys
+keymap("n", "<A-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height", silent = true })
+keymap("n", "<A-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height", silent = true })
+keymap("n", "<A-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width", silent = true })
+keymap("n", "<A-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width", silent = true })
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -35,16 +41,19 @@ keymap("n", "<leader>bd", ":Bdelete!<CR>", opts)
 keymap('n', 'Q', 'q', opts)
 keymap('n', 'q', '<nop>', opts)
 
--- Toggle NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", {})
+-- quit
+keymap("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
 
--- Telescope
-keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
+-- Clear search with <esc>
+keymap("n", "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch", silent = true })
 
 -- Insert --
 -- Press jk fast to exit insert mode 
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
+
+-- Clear search with <esc>
+keymap("i", "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch", silent = true })
 
 -- Visual --
 -- Stay in indent mode
