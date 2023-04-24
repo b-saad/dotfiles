@@ -1,12 +1,5 @@
 bindkey -e
 
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/bsaad/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-
 # -- History command configuration --
 setopt extended_history       # record timestamp of command in HISTFILE
 setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
@@ -22,6 +15,9 @@ alias gc='git commit'
 alias gd='git diff'
 alias gs='git status'
 alias gco='git checkout'
+alias tf='terraform'
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
 
 eval "$(starship init zsh)"
-
