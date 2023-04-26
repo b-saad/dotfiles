@@ -95,6 +95,18 @@ local mappings = {
   ["<leader>w"] = { "<cmd>w!<CR>", "Save" },
   ["<leader>q"] = { "<cmd>q!<CR>", "Quit" },
   ["<leader>h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+
+
+  ["g"] = {
+    name = "LSP",
+    D = { "<cmd>lua vim.lsp.buf.declaration()<CR>", "Go to declaration" },
+    d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Go to definition" },
+    K = { "<cmd>lua vim.lsp.buf.hover()<CR>", "Show Hover" },
+    I = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Go to implementation" },
+    r = { "<cmd>lua vim.lsp.buf.references()<CR>", "Show references" },
+    l = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Open diagnostics" },
+    f = { "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", "Format" },
+  }
   -- ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   -- ["b"] = {
   --   "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
