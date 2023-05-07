@@ -7,22 +7,21 @@ local global = require("global")
 
 local taglist = require("bar.taglist")
 
-local date_widget = wibox.widget.textclock("%a %b %d")
 local time_widget = wibox.widget.textclock("%H:%M - %a %b %d")
 local volume = require("bar.volume")
 local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
 local calendar = require("bar.calendar")
-
+local sysinfo = require("bar.sysinfo")
 
 time_widget:connect_signal("button::press",
     function(_, _, _, button)
         if button == 1 then calendar.widget.toggle() end
     end)
 
-local wrap_widget = function(widgets)
+local wrap_widget = function(widget)
   return wibox.widget({
     {
-      widgets,
+      widget,
       left = beautiful.spacing_lg,
       right = beautiful.spacing_lg,
       top = beautiful.spacing,
@@ -35,10 +34,10 @@ local wrap_widget = function(widgets)
   })
 end
 
-local wrap_widget_sm = function(widgets)
+local wrap_widget_sm = function(widget)
   return wibox.widget({
     {
-      widgets,
+      widget,
       left = beautiful.spacing,
       right = beautiful.spacing,
       top = beautiful.spacing_sm,
@@ -50,6 +49,7 @@ local wrap_widget_sm = function(widgets)
     widget = wibox.container.background,
   })
 end
+
 awful.screen.connect_for_each_screen(function(s)
   s.mytaglist = taglist.create_taglist_widget(s)
 
@@ -74,6 +74,7 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
           layout = wibox.layout.fixed.horizontal,
           spacing = beautiful.spacing,
+          wrap_widget(sysinfo.widget),
           wrap_widget(volume.widget),
           wrap_widget_sm(logout_menu_widget()),
         },

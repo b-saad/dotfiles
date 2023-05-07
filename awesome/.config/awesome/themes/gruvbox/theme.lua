@@ -10,7 +10,7 @@ local utils = require("utils")
 local theme = {}
 
 theme.transparent = "#00000000"
-theme.font = "Fira Code Regular Nerd Font Complete 11"
+theme.font = "FiraMono Nerd Font Mono 11"
 --
 -- Gruvbox-Material Hard Colors
 theme.lightred    = "#ea6962"
