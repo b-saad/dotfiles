@@ -98,9 +98,16 @@ M.globalkeys = gears.table.join(
       {description = "volume mute toggle", group = "audio"}
     ),
 
+    -- Screenshots 
+    awful.key({ "Control", "Shift" }, "4", function() awful.util.spawn("flameshot gui --clipboard --path /home/bsaad/Pictures/Screenshots", false) end,
+              {description = "Capture the region, copy to clipboard and at the same time write to file", group = "launcher"}),
+     awful.key({ "Control", "Shift" }, "5", function() awful.util.spawn("flameshot screen -n 1 --clipboard --path /home/bsaad/Pictures/Screenshots", false) end,
+              {description = "Capture fullscreen (main monitor), copy to clipboard and at the same time write to file", group = "launcher"}),
+       
     -- Custom 
     awful.key({ modkey }, "space", function() awful.util.spawn("rofi -show drun -no-click-to-exit", false) end,
               {description = "launch rofi launcher", group = "launcher"})
+
 )
 
 
