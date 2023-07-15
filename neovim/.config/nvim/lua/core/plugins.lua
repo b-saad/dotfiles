@@ -86,6 +86,12 @@ return packer.startup(function(use)
       requires = { "kyazdani42/nvim-web-devicons", opt = true }
     }
 
+   -- Markdown
+    use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+    })
+
     -- Snippets
     use "L3MON4D3/LuaSnip"                    -- snippet Engine for Neovim written in Lua
 
