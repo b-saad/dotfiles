@@ -36,13 +36,6 @@ M.create_taglist_widget = function(s)
     style = { shape = gears.shape.circle },
     widget_template = {
       {
-        {
-          {
-            id = "text_role",
-            widget = wibox.widget.textbox,
-          },
-          layout = wibox.layout.fixed.horizontal,
-        },
         left = beautiful.spacing,
         right = beautiful.spacing,
         widget = wibox.container.margin,
