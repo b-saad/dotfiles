@@ -45,8 +45,8 @@ return packer.startup(function(use)
       "goolord/alpha-nvim",                   -- nvim dashboard
       requires = { 'nvim-tree/nvim-web-devicons' }
     }
-    use "kyazdani42/nvim-web-devicons"        -- Lua fork of vim-web-devicons for neovim
-    use "kyazdani42/nvim-tree.lua"            -- A file explorer tree for neovim written in lua
+    use "nvim-tree/nvim-web-devicons"        -- Lua fork of vim-web-devicons for neovim
+    use "nvim-tree/nvim-tree.lua"            -- A file explorer tree for neovim written in lua
     use "lukas-reineke/indent-blankline.nvim" -- Indent guides
     use "RRethy/vim-illuminate"               -- Same word highlighting (ex. variable usage)
     use "windwp/nvim-autopairs"               -- Autopairs, integrates with both cmp and treesitter
@@ -55,7 +55,7 @@ return packer.startup(function(use)
     use {
       "akinsho/bufferline.nvim",
       tag = "v3.*",
-      requires = "kyazdani42/nvim-web-devicons"
+      requires = "nvim-tree/nvim-web-devicons"
     }
     use "famiu/bufdelete.nvim"                -- Better buffer closing behaviour
 
