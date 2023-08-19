@@ -73,10 +73,10 @@ theme.taglist_bg_empty    = theme.bg1
 theme.taglist_bg_hover    = theme.lightpurple
 
 -- wallpaper
-theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir()  .. "themes/gruvbox/home-sweet-home.jpg")
+theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir()  .. "themes/gruvbox/gruv-sushi-streets.jpg")
 
 -- -- bar
-theme.bar_height = dpi(40)
+theme.bar_height = dpi(45)
 
 -- spacing
 theme.spacing_sm = dpi(4)
