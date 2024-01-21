@@ -16,6 +16,7 @@ alias gd='git diff'
 alias gs='git status'
 alias gco='git checkout'
 alias tf='terraform'
+alias ss='/home/bsaad/Documents/smoked-salmon/.venv/bin/python3 ~/Documents/smoked-salmon/run.py'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
