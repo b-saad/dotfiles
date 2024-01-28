@@ -6,11 +6,6 @@ return {
   "windwp/nvim-autopairs",               -- Autopairs, integrates with both cmp and treesitter
 
   -- Bufferline
-  {
-    "akinsho/bufferline.nvim",
-    version = "v3.*",
-    dependencies = "nvim-tree/nvim-web-devicons"
-  },
   "famiu/bufdelete.nvim",                -- Better buffer closing behaviour
 
   -- Cmp

@@ -8,7 +8,6 @@ require "core/plugins"            -- Lazy plugin manager
 require "lsp"                     -- LSP plugins and setup
 
 --- Plugin Configurations ---------------------------
-require "config/bufferline"       -- Buffferline
 require "config/colorscheme"      -- Color scheme
 require "config/comment"          -- Commenting
 require "config/gitsigns"         -- Git signs
