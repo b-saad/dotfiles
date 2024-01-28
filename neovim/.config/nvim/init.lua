@@ -9,7 +9,6 @@ require "lsp"                     -- LSP plugins and setup
 
 --- Plugin Configurations ---------------------------
 require "config/colorscheme"      -- Color scheme
-require "config/comment"          -- Commenting
 require "config/gitsigns"         -- Git signs
 require "config/illuminate"       -- Same word highlighting
 require "config/indent-blankline" -- Indent Guides
