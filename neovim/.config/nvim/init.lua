@@ -2,13 +2,12 @@
 ---- Core Settings ----------------------------------
 require "core/keymaps"            -- Custom Keymaps
 require "core/options"            -- General Options
-require "core/plugins"            -- Plugins + Packer Config
+require "core/plugins"            -- Lazy plugin manager
 
 --- LSP ---------------------------------------------
 require "lsp"                     -- LSP plugins and setup
 
 --- Plugin Configurations ---------------------------
-require "config/alpha-nvim"       -- Dashboard
 require "config/bufferline"       -- Buffferline
 require "config/colorscheme"      -- Color scheme
 require "config/comment"          -- Commenting
