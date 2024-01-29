@@ -15,7 +15,7 @@ set.shortmess:append "c"                     -- don't give |ins-completion-menu|
 set.smartindent = true                       -- makes indenting smart
 set.smarttab = true                          -- makes tabbing smarter will realize you have 2 vs 4
 set.swapfile = false                         -- don't use swapfile
-set.timeoutlen = 400			                   -- time (ms) to wait for a mapped sequence to complete
+set.timeoutlen = 500			                   -- time (ms) to wait for a mapped sequence to complete
 set.updatetime = 300                         -- faster completion
 vim.cmd [[set completeopt=menuone,noselect]] -- mostly just for cmp
 vim.cmd [[set formatoptions-=cro]]           -- stop newline continution of comments
