@@ -41,12 +41,6 @@ return {
   -- Snippets
   "L3MON4D3/LuaSnip",                    -- snippet Engine for Neovim written in Lua
 
-  -- Telescope
-  {
-    "nvim-telescope/telescope.nvim",        -- Find, filter, preview, pick. all lua, with telescope
-    dependencies = { {"nvim-lua/plenary.nvim"} }
-  },
-
   -- Treesitter
   {
     "nvim-treesitter/nvim-treesitter",
