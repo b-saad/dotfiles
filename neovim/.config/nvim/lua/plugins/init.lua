@@ -1,7 +1,6 @@
 return {
   "nvim-tree/nvim-web-devicons",        -- Lua fork of vim-web-devicons for neovim
   "nvim-tree/nvim-tree.lua",            -- A file explorer tree for neovim written in lua
-  "lukas-reineke/indent-blankline.nvim", -- Indent guides
   "RRethy/vim-illuminate",               -- Same word highlighting (ex. variable usage)
   "windwp/nvim-autopairs",               -- Autopairs, integrates with both cmp and treesitter
 
