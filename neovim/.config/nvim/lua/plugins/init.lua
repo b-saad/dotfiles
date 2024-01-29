@@ -32,12 +32,6 @@ return {
   "williamboman/mason-lspconfig.nvim",
   "jose-elias-alvarez/null-ls.nvim",     -- for formatters and linters
 
-  -- Lualine
-  {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" }
-  },
-
  -- Markdown
   {
     "iamcco/markdown-preview.nvim",

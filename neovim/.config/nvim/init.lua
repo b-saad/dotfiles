@@ -11,7 +11,6 @@ require "lsp"                     -- LSP plugins and setup
 require "config/colorscheme"      -- Color scheme
 require "config/gitsigns"         -- Git signs
 require "config/illuminate"       -- Same word highlighting
-require "config/lualine"          -- Lua status line
 require "config/nvim-autopairs"   -- Auto completion for brackets & quotes
 require "config/nvim-cmp"         -- Auto Complete
 require "config/nvim-tree"        -- Nvim-tree
