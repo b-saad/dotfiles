@@ -31,15 +31,6 @@ return {
   -- Snippets
   "L3MON4D3/LuaSnip",                    -- snippet Engine for Neovim written in Lua
 
-  -- Treesitter
-  {
-    "nvim-treesitter/nvim-treesitter",
-    build = function()
-      local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-      ts_update()
-    end,
-  },
-
   -- Which Key
   "folke/which-key.nvim",                -- Keyboard shortcut helpers
 }

@@ -13,5 +13,4 @@ require "config/illuminate"       -- Same word highlighting
 require "config/nvim-autopairs"   -- Auto completion for brackets & quotes
 require "config/nvim-cmp"         -- Auto Complete
 require "config/nvim-tree"        -- Nvim-tree
-require "config/treesitter"       -- Syntax Highlighting
 require "config/whichkey"         -- Shortcut helper

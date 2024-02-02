@@ -63,7 +63,7 @@ nvim_tree.setup {
     },
   },
   filters = {
-    git_ignored = true,
+    git_ignored = false,
   },
   view = {
     width = 35,
