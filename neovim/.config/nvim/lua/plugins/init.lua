@@ -3,7 +3,6 @@ return {
     "nvim-tree/nvim-web-devicons",        -- Lua fork of vim-web-devicons for neovim
     lazy = true,
   },
-  "windwp/nvim-autopairs",               -- Autopairs, integrates with both cmp and treesitter
 
   -- Bufferline
   "famiu/bufdelete.nvim",                -- Better buffer closing behaviour
