@@ -7,10 +7,7 @@ return {
   end,
   config = function()
     -- Load nvimtree with protected call
-    local status_ok, nvim_tree = pcall(require, "nvim-tree")
-    if not status_ok then
-        return
-    end
+    local nvim_tree = require("nvim-tree")
 
     local function on_attach(bufnr)
       local api = require('nvim-tree.api')

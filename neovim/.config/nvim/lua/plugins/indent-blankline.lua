@@ -2,10 +2,7 @@ return {
   "lukas-reineke/indent-blankline.nvim", -- Indent guides
   main = "ibl",
   config = function ()
-    local status_ok, ibl = pcall(require, "ibl")
-    if not status_ok then
-      return
-    end
+    local ibl = require("ibl")
     ibl.setup({
      exclude = {
         buftypes = {

@@ -2,12 +2,8 @@ return {
   "nvim-telescope/telescope.nvim",        -- Find, filter, preview, pick. all lua, with telescope
   dependencies = { {"nvim-lua/plenary.nvim"} },
   config = function ()
-    local status_ok, telescope = pcall(require, "telescope")
-    if not status_ok then
-      return
-    end
-
-    local actions = require "telescope.actions"
+    local telescope = require("telescope")
+    local actions = require("telescope.actions")
 
     telescope.setup {
       defaults = {

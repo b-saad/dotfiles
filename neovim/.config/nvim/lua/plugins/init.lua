@@ -17,6 +17,15 @@ return {
     },
   },
 
+  -- Comments
+  {
+    "numToStr/Comment.nvim",
+    lazy = false,
+  },
+
+  -- Git -- 
+  "lewis6991/gitsigns.nvim",  -- fast git decorations 
+
   -- LSP
   "neovim/nvim-lspconfig",               -- enable lsp
   "williamboman/mason.nvim",             -- simple to use language server installer
