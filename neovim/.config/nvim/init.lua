@@ -6,6 +6,5 @@ require "core/plugins"            -- Lazy plugin manager
 --- LSP ---------------------------------------------
 require "lsp"                     -- LSP plugins and setup
 
---- Plugin Configurations ---------------------------
-require "config/nvim-cmp"         -- Auto Complete
-require "config/whichkey"         -- Shortcut helper
+--- nvim-cmp configuration ---------------------------
+require "cmp/nvim-cmp"         -- Auto Complete

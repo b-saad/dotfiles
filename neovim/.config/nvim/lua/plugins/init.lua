@@ -8,10 +8,14 @@ return {
   "famiu/bufdelete.nvim",                -- Better buffer closing behaviour
 
   -- Cmp
-  "hrsh7th/nvim-cmp",                    -- completion plugin for neovim coded in Lua
-  "hrsh7th/cmp-buffer",                  -- nvim-cmp source for buffer words
-  "hrsh7th/cmp-path",                    -- nvim-cmp source for path
-  "hrsh7th/cmp-nvim-lsp",
+  {
+    "hrsh7th/nvim-cmp",                    -- completion plugin for neovim coded in Lua
+    dependencies = {
+      "hrsh7th/cmp-buffer",                  -- nvim-cmp source for buffer words
+      "hrsh7th/cmp-path",                    -- nvim-cmp source for path
+      "hrsh7th/cmp-nvim-lsp",
+    },
+  },
 
   -- LSP
   "neovim/nvim-lspconfig",               -- enable lsp
@@ -27,7 +31,4 @@ return {
 
   -- Snippets
   "L3MON4D3/LuaSnip",                    -- snippet Engine for Neovim written in Lua
-
-  -- Which Key
-  "folke/which-key.nvim",                -- Keyboard shortcut helpers
 }

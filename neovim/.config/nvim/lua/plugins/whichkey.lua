@@ -1,8 +1,3 @@
-local status_ok, which_key = pcall(require, "which-key")
-if not status_ok then
-	return
-end
-
 local setup = {
   plugins = {
     marks = true, -- shows a list of your marks on ' and `
@@ -198,5 +193,12 @@ local mappings = {
   -- },
 }
 
-which_key.setup(setup)
-which_key.register(mappings, opts)
+return {
+  -- Keyboard shortcut helpers
+  "folke/which-key.nvim",
+  config = function ()
+    local which_key = require("which-key")
+    which_key.setup(setup)
+    which_key.register(mappings, opts)
+  end
+}
