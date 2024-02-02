@@ -8,7 +8,6 @@ require "core/plugins"            -- Lazy plugin manager
 require "lsp"                     -- LSP plugins and setup
 
 --- Plugin Configurations ---------------------------
-require "config/gitsigns"         -- Git signs
 require "config/illuminate"       -- Same word highlighting
 require "config/nvim-autopairs"   -- Auto completion for brackets & quotes
 require "config/nvim-cmp"         -- Auto Complete

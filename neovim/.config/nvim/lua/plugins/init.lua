@@ -13,9 +13,6 @@ return {
   "hrsh7th/cmp-path",                    -- nvim-cmp source for path
   "hrsh7th/cmp-nvim-lsp",
 
-  -- Git -- 
-  "lewis6991/gitsigns.nvim",             -- fast git decorations 
-
   -- LSP
   "neovim/nvim-lspconfig",               -- enable lsp
   "williamboman/mason.nvim",             -- simple to use language server installer
