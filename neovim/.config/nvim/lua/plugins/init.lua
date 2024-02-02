@@ -13,14 +13,6 @@ return {
   "hrsh7th/cmp-path",                    -- nvim-cmp source for path
   "hrsh7th/cmp-nvim-lsp",
 
-  -- Colorschemes
-  {
-    -- "sainnhe/gruvbox-material",
-    "sainnhe/everforest",
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other start plugins 
-  },
-
   -- Git -- 
   "lewis6991/gitsigns.nvim",             -- fast git decorations 
 

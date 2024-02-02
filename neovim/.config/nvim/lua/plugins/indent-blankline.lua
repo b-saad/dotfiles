@@ -1,4 +1,3 @@
-
 return {
   "lukas-reineke/indent-blankline.nvim", -- Indent guides
   main = "ibl",
