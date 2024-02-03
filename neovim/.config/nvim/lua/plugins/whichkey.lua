@@ -101,7 +101,14 @@ local mappings = {
     r = { "<cmd>lua vim.lsp.buf.references()<CR>", "Show references" },
     l = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Open diagnostics" },
     f = { "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", "Format" },
-  }
+  },
+
+  ["<leader>t"] = {
+     name = "Terminal",
+     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
+     h = { "<cmd>ToggleTerm size=20 direction=horizontal<cr>", "Horizontal" },
+     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+  },
   -- ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   -- ["b"] = {
   --   "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
@@ -181,16 +188,6 @@ local mappings = {
   --   C = { "<cmd>Telescope commands<cr>", "Commands" },
   -- },
   --
-  -- t = {
-  --   name = "Terminal",
-  --   n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-  --   u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-  --   t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-  --   p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
-  --   f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
-  --   h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
-  --   v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
-  -- },
 }
 
 return {
