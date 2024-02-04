@@ -17,12 +17,6 @@ return {
     },
   },
 
-  -- Comments
-  {
-    "numToStr/Comment.nvim",
-    lazy = false,
-  },
-
   -- Git -- 
   "lewis6991/gitsigns.nvim",  -- fast git decorations 
 
@@ -30,7 +24,12 @@ return {
   "neovim/nvim-lspconfig",               -- enable lsp
   "williamboman/mason.nvim",             -- simple to use language server installer
   "williamboman/mason-lspconfig.nvim",
-  "jose-elias-alvarez/null-ls.nvim",     -- for formatters and linters
+  {
+    "jose-elias-alvarez/null-ls.nvim",     -- for formatters and linters
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+  },
 
  -- Markdown
   {

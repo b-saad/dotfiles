@@ -38,8 +38,8 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<leader>bd", ":Bdelete!<CR>", opts)
 
 -- Don't accidently create macros when trying to quit
-keymap('n', 'Q', 'q', opts)
-keymap('n', 'q', '<nop>', opts)
+keymap("n", "Q", "q", opts)
+keymap("n", "q", "<nop>", opts)
 
 -- quit
 keymap("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
@@ -49,20 +49,20 @@ keymap("n", "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch", 
 
 -- Illuminate highlighted word navigation
 keymap(
-  "n",
-  "<a-n>",
-  '<cmd>lua require"illuminate".next_reference{wrap=true}<cr>',
-  { noremap = true, desc = "go to next ref of highlighted word" }
+	"n",
+	"<a-n>",
+	'<cmd>lua require"illuminate".next_reference{wrap=true}<cr>',
+	{ noremap = true, desc = "go to next ref of highlighted word" }
 )
 keymap(
-  "n",
-  "<a-p>",
-  '<cmd>lua require"illuminate".next_reference{reverse=true,wrap=true}<cr>',
-  { noremap = true, desc = "go to previous ref of highlighted word" }
+	"n",
+	"<a-p>",
+	'<cmd>lua require"illuminate".next_reference{reverse=true,wrap=true}<cr>',
+	{ noremap = true, desc = "go to previous ref of highlighted word" }
 )
 
 -- Insert --
--- Press jk fast to exit insert mode 
+-- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
 

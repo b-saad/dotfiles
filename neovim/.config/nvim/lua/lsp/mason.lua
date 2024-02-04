@@ -1,15 +1,15 @@
 local servers = {
-  "bashls",
-  "dockerls",
-  "docker_compose_language_service",
-  "golangci_lint_ls",
-  "gopls",
-  "jsonls",
+	"bashls",
+	"dockerls",
+	"docker_compose_language_service",
+	"golangci_lint_ls",
+	"gopls",
+	"jsonls",
 	"lua_ls",
-  "pylsp",
-  "rust_analyzer",
-  "terraformls",
-  "yamlls",
+	"pylsp",
+	"rust_analyzer",
+	"terraformls",
+	"yamlls",
 }
 
 local settings = {
