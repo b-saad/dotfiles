@@ -8,6 +8,12 @@ setopt hist_ignore_space      # ignore commands that start with space
 setopt hist_verify            # show command with history expansion to user before running it
 setopt share_history          # share command history data
 
+# -- Autocompletion
+autoload -U compinit; compinit
+_comp_options+=(globdots) # With hidden files
+
+source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # -- Aliases --
 alias g='git'
 alias ga='git add'
@@ -16,7 +22,6 @@ alias gd='git diff'
 alias gs='git status'
 alias gco='git checkout'
 alias tf='terraform'
-alias ss='/home/bsaad/Documents/smoked-salmon/.venv/bin/python3 ~/Documents/smoked-salmon/run.py'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
