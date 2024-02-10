@@ -17,6 +17,8 @@ source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 # -- Aliases --
 alias g='git'
 alias ga='git add'
+alias gp='git push'
+alias gpl='git pull'
 alias gc='git commit'
 alias gd='git diff'
 alias gs='git status'
