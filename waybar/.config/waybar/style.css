@@ -34,8 +34,9 @@ tooltip * {
     color: #d4be98;
     font-weight: bolder;
     font-style: normal;
-    margin: 0.2rem 0.1rem;
-    border-radius: 20px;
+    margin: 6px 3px;
+    padding: 2px 3px;
+    border-radius: 9px;
 }
 
 button:hover {

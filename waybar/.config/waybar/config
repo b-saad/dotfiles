@@ -10,6 +10,7 @@
     //"width": 1920,    // Waybar width
     "spacing": 14,
     "fixed-center": true, 
+    "reload_style_on_change": true,
 
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
