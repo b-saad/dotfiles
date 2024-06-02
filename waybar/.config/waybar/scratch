@@ -1,0 +1,20 @@
+
+    "pulseaudio": {
+      "format": "蓼 {volume}%",
+      "format-bluetooth": " {volume}%",
+      "scroll-step": 2,
+      "on-click-right": "pavucontrol",
+      "ignored-sinks": ["Easy Effects Sink"],
+      "max-length": 25,
+      "exec":"pactl --format=json list sinks | jq -cM --unbuffered \"map(select(.name == \\\"$(pactl get-default-sink)\\\"))[0].properties | [.\\\"media.name\\\",.\\\"alsa.name\\\",.\\\"node.nick\\\",.\\\"alsa.long_card_name\\\"] | map(select(length>0))[0] | {text:.}\"",
+      "exec-if": "sleep 0.1", // Give enough time for `pactl get-default-sink` to update
+      "on-click": "pactl --format=json list sinks short | jq -cM --unbuffered \"[.[].name] | .[((index(\\\"$(pactl get-default-sink)\\\")+1)%length)]\" | xargs pactl set-default-sink"
+    },
+    "network": {
+        "format-wifi":  " ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-disconnected": "  睊  ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format-wifi": "{essid} {signalStrength}%",
+        "on-click": "alacritty --class network -e nmtui"
+    },
