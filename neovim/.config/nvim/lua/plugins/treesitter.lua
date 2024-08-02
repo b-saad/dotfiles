@@ -23,6 +23,7 @@ return {
 				"java",
 				"javascript",
 				"json",
+        "jsonnet",
 				"latex",
 				"lua",
 				"make",

@@ -5,6 +5,7 @@ local servers = {
 	"golangci_lint_ls",
 	"gopls",
 	"jsonls",
+  "jsonnet_ls",
 	"lua_ls",
 	"pylsp",
 	"rust_analyzer",
