@@ -32,6 +32,10 @@ return {
 			end,
 		}
 
+    local filename = {
+      "filename",
+      path = 1, -- show the relative path
+    }
 		local filetype = {
 			"filetype",
 			icons_enabled = false,
@@ -65,7 +69,7 @@ return {
 			sections = {
 				lualine_a = { mode, branch, diagnostics },
 				lualine_b = { diff },
-				lualine_c = {},
+				lualine_c = { filename },
 				-- lualine_x = { "encoding", "fileformat", "filetype" },
 				lualine_x = { spaces, "encoding", filetype },
 				lualine_y = { location },
@@ -74,7 +78,7 @@ return {
 			inactive_sections = {
 				lualine_a = {},
 				lualine_b = {},
-				lualine_c = { "filename" },
+				lualine_c = {},
 				lualine_x = { "location" },
 				lualine_y = {},
 				lualine_z = {},
