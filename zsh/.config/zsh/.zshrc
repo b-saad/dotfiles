@@ -28,12 +28,15 @@ alias tf='terraform'
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# -- NVM --
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# macOS specific
+# -- macOS specific --
 # macports
-# export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # brew
-# eval "$(/usr/local/bin/brew shellenv)"
+eval "$(/usr/local/bin/brew shellenv)"
 
 
 eval "$(starship init zsh)"
