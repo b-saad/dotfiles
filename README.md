@@ -28,10 +28,6 @@ stow -v zsh git neovim    # whatever other else, can use "*/" for everything
 - [ripgrep](https://github.com/BurntSushi/ripgrep) for Telescope live_grep
 - Luarocks
 
-
-## Install Plugins
-Open Neovim session, wait for packer to install on startup (in `plugins.lua`), and run `:PackerSync`
-
 ## Mac OS Fonts
 
 ## Installing Fonts
