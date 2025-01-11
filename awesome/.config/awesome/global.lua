@@ -7,7 +7,7 @@ local M = {}
 -- However, you can use another modifier like Mod1, but it may interact with others.
 M.modkey = "Mod4"
 
-M.terminal = "kitty"
+M.terminal = "alactritty"
 
 M.editor = "nvim" or os.getenv("EDITOR")
 
