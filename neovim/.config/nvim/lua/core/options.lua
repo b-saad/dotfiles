@@ -14,6 +14,7 @@ set.shortmess:append("sI") -- disable nvim intro
 set.shortmess:append("c") -- don't give |ins-completion-menu| messages
 set.smartindent = true -- makes indenting smart
 set.smarttab = true -- makes tabbing smarter will realize you have 2 vs 4
+set.spell = true -- spellcheck in comments
 set.swapfile = false -- don't use swapfile
 set.timeoutlen = 500 -- time (ms) to wait for a mapped sequence to complete
 set.updatetime = 300 -- faster completion

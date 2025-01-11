@@ -5,7 +5,7 @@ local servers = {
 	"golangci_lint_ls",
 	"gopls",
 	"jsonls",
-  "jsonnet_ls",
+	"jsonnet_ls",
 	"lua_ls",
 	"pylsp",
 	"rust_analyzer",
@@ -17,9 +17,9 @@ local settings = {
 	ui = {
 		border = "none",
 		icons = {
-			package_installed = "◍",
-			package_pending = "◍",
-			package_uninstalled = "◍",
+			package_installed = "✓",
+			package_pending = "➜",
+			package_uninstalled = "✗",
 		},
 	},
 	log_level = vim.log.levels.INFO,

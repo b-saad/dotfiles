@@ -1,6 +1,6 @@
 return {
   {
-    "nvim-tree/nvim-web-devicons",        -- Lua fork of vim-web-devicons for neovim
+    "nvim-tree/nvim-web-devicons",       -- Lua fork of vim-web-devicons for neovim
     lazy = true,
   },
 
@@ -9,25 +9,26 @@ return {
 
   -- Cmp
   {
-    "hrsh7th/nvim-cmp",                    -- completion plugin for neovim coded in Lua
+    "hrsh7th/nvim-cmp",                  -- completion plugin for neovim coded in Lua
     dependencies = {
-      "hrsh7th/cmp-buffer",                  -- nvim-cmp source for buffer words
-      "hrsh7th/cmp-path",                    -- nvim-cmp source for path
+      "hrsh7th/cmp-buffer",              -- nvim-cmp source for buffer words
+      "hrsh7th/cmp-path",                -- nvim-cmp source for path
       "hrsh7th/cmp-nvim-lsp",
     },
   },
 
   -- Git -- 
-  "lewis6991/gitsigns.nvim",  -- fast git decorations 
+  "lewis6991/gitsigns.nvim",             -- fast git decorations 
 
   -- LSP
   "neovim/nvim-lspconfig",               -- enable lsp
   "williamboman/mason.nvim",             -- simple to use language server installer
   "williamboman/mason-lspconfig.nvim",
   {
-    "jose-elias-alvarez/null-ls.nvim",     -- for formatters and linters
+    "nvimtools/none-ls.nvim",            -- for formatters and linters
     dependencies = {
       "nvim-lua/plenary.nvim",
+      "williamboman/mason.nvim",
     },
   },
 
