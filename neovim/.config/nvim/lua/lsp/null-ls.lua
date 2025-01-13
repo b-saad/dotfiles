@@ -6,9 +6,6 @@ local null_ls_servers = {
 
 	-- Fix common misspellings in text files.
 	null_ls.builtins.completion.spell,
-
-	-- Fix common misspellings in text files.
-	null_ls.builtins.formatting.codespell,
 }
 
 null_ls.setup({
