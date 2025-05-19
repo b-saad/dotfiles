@@ -25,6 +25,9 @@ alias gs='git status'
 alias gco='git checkout'
 alias tf='terraform'
 
+# Mac os ventura doesn't have python 2 installed anymore
+alias python=/user/bin/python3
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
@@ -32,11 +35,21 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
+
+# -- include per env custom files 
+# usage: create .zsh files, in custom folder to be included ex work_aliases
+for file in '$ZDOTDIR/custom/*'
+do 
+  if [[ -f "$file" && "${file:t}" != ".gitignore" ]]; then
+    source "$file" 
+  fi
+done
+
 # -- macOS specific --
+# Put these in .zsh files in custom if needed
 # macports
 # export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # brew
 # eval "$(/usr/local/bin/brew shellenv)"
-
 
 eval "$(starship init zsh)"
