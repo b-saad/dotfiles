@@ -53,3 +53,5 @@ done
 # eval "$(/usr/local/bin/brew shellenv)"
 
 eval "$(starship init zsh)"
+
+. "$HOME/.local/bin/env"
