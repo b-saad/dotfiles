@@ -24,6 +24,7 @@ alias gd='git diff'
 alias gs='git status'
 alias gco='git checkout'
 alias tf='terraform'
+alias flush-dns='sudo resolvectl flush-caches'
 
 # Mac os ventura doesn't have python 2 installed anymore
 alias python=/user/bin/python3
