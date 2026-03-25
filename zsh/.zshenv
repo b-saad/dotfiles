@@ -1,8 +1,8 @@
 export DOTFILES="$HOME/.dotfiles"
 export ZDOTDIR="$HOME/.config/zsh/"
 
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR="vim"
+export VISUAL="vim"
 
 export HISTFILE="$HOME/.config/zsh/.histfile"
 export HISTSIZE=50000
