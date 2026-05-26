@@ -1,3 +1,5 @@
 theme = Catppuccin Mocha
 
 copy-on-select = clipboard 
+
+font-size = 14
