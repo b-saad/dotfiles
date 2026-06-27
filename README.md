@@ -10,6 +10,9 @@
 ```
 cd ~
 git clone <Add url here>  ~/.dotfiles
+cd .dotfiles
+# need to pull submodules on initial clone
+git submodule update --init --recursive
 
 # Dryrun to preview links
 stow -nv zsh git neovim   # whatever other else, can use "*/" for everything

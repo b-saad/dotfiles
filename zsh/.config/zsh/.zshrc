@@ -17,14 +17,13 @@ source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 # -- Aliases --
 alias g='git'
 alias ga='git add'
-alias gp='git push'
+alias gps='git push'
 alias gpl='git pull'
 alias gc='git commit'
 alias gd='git diff'
 alias gs='git status'
 alias gco='git checkout'
 alias tf='terraform'
-alias flush-dns='sudo resolvectl flush-caches'
 
 # Mac os ventura doesn't have python 2 installed anymore
 alias python=/user/bin/python3
@@ -38,7 +37,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 
 # -- include per env custom files 
-# usage: create .zsh files, in custom folder to be included ex work_aliases
+# usage: create .zsh files, in ./custom-src folder to be included and then
+#   symlink them into the ./custom-src folder. Files in the ./custom-src folder
+#   are tracked in git.
 for file in '$ZDOTDIR/custom/*'
 do 
   if [[ -f "$file" && "${file:t}" != ".gitignore" ]]; then
