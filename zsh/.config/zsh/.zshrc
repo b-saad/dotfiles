@@ -40,7 +40,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # usage: create .zsh files, in ./custom-src folder to be included and then
 #   symlink them into the ./custom-src folder. Files in the ./custom-src folder
 #   are tracked in git.
-for file in '$ZDOTDIR/custom/*'
+for file in $ZDOTDIR/custom/*
 do 
   if [[ -f "$file" && "${file:t}" != ".gitignore" ]]; then
     source "$file" 
@@ -56,4 +56,5 @@ done
 
 eval "$(starship init zsh)"
 
-. "$HOME/.local/bin/env"
+# added by uv/rustup installers — only source if present
+[[ -f "$HOME/.local/bin/env" ]] && . "$HOME/.local/bin/env"
