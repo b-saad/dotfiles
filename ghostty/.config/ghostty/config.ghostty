@@ -2,4 +2,5 @@ theme = Catppuccin Mocha
 
 copy-on-select = clipboard 
 
+font-family = "FiraMono Nerd Font Mono"
 font-size = 14
