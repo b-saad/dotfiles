@@ -13,6 +13,47 @@ alias gov_okta_stg='eval $(okta-aws-login -a il2stg)'
 alias fed_okta_stg='eval $(okta-aws-login -a il5stg)'
 alias k='kubectl'
 
+# -- AWS Profiles --
+alias aws-profiles='command aws configure list-profiles'
+alias aws-selected='command aws --profile "$(aws-current)"'
+
+alias aws-core-dev='aws-use splunkcloud-cworks-core-dev_admin'
+alias aws-core-stg='aws-use splunkcloud-cworks-core-stg_admin'
+alias aws-core-lve='aws-use splunkcloud-cworks-core-lve_admin'
+alias aws-core-gov-stg='aws-use splunkcloud-cworks-core-gov-stg_admin'
+alias aws-core-fed-stg='aws-use splunkcloud-cworks-core-fed-stg_admin'
+
+alias aws-k8s-dev='aws-use splunk-ccp-k8s-playground_power'
+alias aws-k8s-stg='aws-use splunk-ccp-k8s-staging_power'
+alias aws-k8s-lve='aws-use splunk-ccp-k8s-production_splkcld_account_power'
+alias aws-k8s-gov-stg='aws-use splunk-k8s-gov-stg_power'
+alias aws-k8s-fed-stg='aws-use splunk-k8s-fhi-stg1_power'
+
+aws-current() {
+  print -r -- "${AWS_DEFAULT_PROFILE:-${AWS_PROFILE:-default}}"
+}
+
+aws-use() {
+  if (( $# != 1 )); then
+    print -u2 'Usage: aws-use <profile>'
+    return 2
+  fi
+
+  local configured_profiles
+  configured_profiles=$(command aws configure list-profiles) || return
+  local -a profiles
+  profiles=("${(@f)configured_profiles}")
+
+  if [[ -z $1 ]] || (( ! ${profiles[(Ie)$1]} )); then
+    print -ru2 -- "Unknown AWS profile: $1. Run aws-profiles to list configured profiles."
+    return 1
+  fi
+
+  unset AWS_DEFAULT_PROFILE
+  export AWS_PROFILE="$1"
+  aws-current
+}
+
 cleanLocalCO2() {
   branch=$(git rev-parse --abbrev-ref HEAD)
   echo "resetting to $branch"
